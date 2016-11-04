@@ -9,7 +9,7 @@ defmodule ExListTest do
   # Ignore these functions
   def sample_n, do: [1,2,3,4,5]
   def sample_s, do: ["hello", "hi", "goodbye", "hola"]
-  def sample_x, do: ['extreme', "hijacks", "ox", "espresso"]
+  def sample_x, do: ["extreme", "hijacks", "ox", "espresso"]
 
   test "head of list of integers" do
     assert ExList.head(sample_n) == 1
@@ -91,22 +91,7 @@ defmodule ExListTest do
   end
 
   @tag :pending
-  test "join an empty list of strings together using a reduce" do
-    assert ExList.reduce_concat([]) == ""
-  end
-
-  @tag :pending
-  test "join a list of strings together using a reduce" do
-    assert ExList.reduce_concat(sample_s) == "hellohigoodbyehola"
-  end
-
-  @tag :pending
-  test "join a list of strings with spaces" do
-    assert ExList.join(sample_s, " ") == "hello hi goodbye hola"
-  end
-
-  @tag :pending
-  test "join a list of strings as numbers with hyphens" do
-    assert ExList.join(["123","456", "7890"], "-") == "123-456-7890"
+  test "multiple evens by 3 and odds by 2 then sum all" do
+    assert ExList.triple_evens_double_odds([1,2,3,4,5]) == 36
   end
 end

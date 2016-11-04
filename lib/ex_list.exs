@@ -76,15 +76,10 @@ defmodule ExList do
   end
 
   @doc """
-  Return the strings in the list joined together using the reduce function
-  """
-  def reduce_concat(list) do
-  end
+  Multiply all evens by 3 and all odds by 2 then sum them all
 
-  @doc """
-  Return a string of all strings in the list separated by `substring`
+  ## Examples
+    iex> ExList.triple_evens_double_odds([1,2,3,5,4]) # 36
   """
-  def join(list, substring) do
-  end
-
+  def triple_evens_double_odds(list) do
 end
