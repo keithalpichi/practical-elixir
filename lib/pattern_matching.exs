@@ -39,8 +39,9 @@ defmodule PatternMatching do
   end
   
   @doc """
-  If and only if `a` is a function, return the result of calling `a` with `b`.
+  If and only if `a` is a function, return the result of calling `a` with `b`. If `a` is not a function return `:error`
 
+  Again, how many ways can you implement this?
   Hint- anonymous functions
 
   ## Examples

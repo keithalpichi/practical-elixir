@@ -55,13 +55,23 @@ defmodule PatternMatchingTest do
 
 
   @tag :pending
-  test "guard match an item in a list" do
+  test "guard match first item in list is a map" do
     assert PatternMatching.first_item_map_guard([%{}, 12, "foo"]) == "first item is a map"
+  end
+
+  @tag :pending
+  test "guard match first item in list not a map" do
+    assert PatternMatching.first_item_map_guard([12, "foo"]) == nil
   end
 
   @tag :pending
   test "guard match a function" do
     assert PatternMatching.apply_guard(&-/1, 3.3) == -3.3
+  end
+
+  @tag :pending
+  test "guard match a non-function" do
+    assert PatternMatching.apply_guard("boo!", 3.3) == :error
   end
 
 end
