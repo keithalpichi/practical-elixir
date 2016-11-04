@@ -6,6 +6,14 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ExMapTest do
   use ExUnit.Case
 
+  test "multiple positive matches of left and right maps" do
+    flunk "Only edit the right side of '=='. Remove comments below and `flunk` when you're ready to run this test."
+    #map = %{a: 2, b: x} = %{a: 2, b: 10} 
+    #assert map == 
+    #assert x == 
+  end
+
+  @tag :pending
   test "longest word of an empty map is nil" do
     assert ExMap.longest_word("") == :nil
   end
@@ -33,6 +41,11 @@ defmodule ExMapTest do
   @tag :pending
   test "count of 'elixir' is 3" do
     assert ExMap.words("elixir elixir elixir") == %{"elixir" => 3}
+  end
+
+  @tag :pending
+  test "count of three words" do
+    assert ExMap.words("elixir erlang otp") == %{"elixir" => 1, "erlang" => 1, "otp" => 1}
   end
 
   @tag :pending
@@ -97,17 +110,17 @@ defmodule ExMapTest do
 
   @tag :pending
   test "string length of one word" do
-    assert ExMap.string_length("bob") == %{3: ["bob"]}
+    assert ExMap.string_length("bob") == %{3 => ["bob"]}
   end
 
   @tag :pending
   test "string length of four words" do
-    assert ExMap.string_length("bob sally alice joe") == %{3: ["bob", "joe"], 5: ["alice", "sally"]}
+    assert ExMap.string_length("bob sally alice joe") == %{3 => ["bob", "joe"], 5 => ["alice", "sally"]}
   end
 
   @tag :pending
   test "string length of string with non-words" do
-    assert ExMap.string_length("^%$# bob !!!") == %{3: ["bob"]}
+    assert ExMap.string_length("^%$# bob !!!") == %{3 => ["bob"]}
   end
 
   @tag :pending
@@ -117,33 +130,33 @@ defmodule ExMapTest do
 
   @tag :pending
   test "three pairs in a map" do
-    assert ExMap.even_odds(%{a: 5, b: 6, c: 7}) == %{a: 6, b: 8, c:8}
+    assert ExMap.even_odds(%{a: 5, b: 6, c: 7}) == %{a: 6, b: 8, c: 8}
   end
 
   @tag :pending
   test "invert map with integers as keys and strings as values" do
-    assert ExMap.invert(%{2: "a"}) == %{"a" => 2}
+    assert ExMap.invert(%{2 => "a"}) == %{"a" => 2}
   end
 
   @tag :pending
   test "invert map with strings as keys and integers as values" do
-    assert ExMap.invert(%{"a" => 1, "b" => 2}) == %{1: "a", 2: "b"}
+    assert ExMap.invert(%{"a" => 1, "b" => 2}) == %{1 => "a", 2 => "b"}
   end
 
   @tag :pending
   test "invert map where values are lists" do
-    assert ExMap.invert(%{2: ["a", "b"]}) == %{"a" => 2, "b" => 2}
+    assert ExMap.invert(%{2 => ["a", "b"]}) == %{"a" => 2, "b" => 2}
   end
 
   @tag :pending
   test "print all struct values excluding nil values" do
-    unknown = ExMap%{})
+    unknown = %ExMap{}
     assert ExMap.print(unknown) == "elixir" 
   end
 
   @tag :pending
   test "print all struct values" do
-    john = ExMap%{name: "john"})
+    john = %ExMap{name: "john"}
     assert ExMap.print(john) == "john elixir" 
   end
 

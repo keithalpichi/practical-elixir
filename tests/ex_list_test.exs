@@ -6,11 +6,11 @@ ExUnit.configure exclude: :pending, trace: true
 defmodule ExListTest do
   use ExUnit.Case
 
+  # Ignore these functions
   def sample_n, do: [1,2,3,4,5]
   def sample_s, do: ["hello", "hi", "goodbye", "hola"]
   def sample_x, do: ['extreme', "hijacks", "ox", "espresso"]
 
-  @tag :pending
   test "head of list of integers" do
     assert ExList.head(sample_n) == 1
   end
@@ -47,7 +47,7 @@ defmodule ExListTest do
 
   @tag :pending
   test "Multiply every item in list by 2" do
-    assert ExList.mult_by(sample_n, 2) == [1,4,6,8,10]
+    assert ExList.mult_by(sample_n, 2) == [2,4,6,8,10]
   end
 
   @tag :pending
@@ -109,18 +109,4 @@ defmodule ExListTest do
   test "join a list of strings as numbers with hyphens" do
     assert ExList.join(["123","456", "7890"], "-") == "123-456-7890"
   end
-
-  # http://elixir-lang.org/docs/stable/elixir/Range.html#content
-  @tag :pending
-  test "creates list of length 0 using Range" do
-    list =  ExList.make_list(0)
-    assert Enum.count(list) == 0
-  end
-
-  @tag :pending
-  test "creates list of length 10 using Range" do
-    list = ExList.make_list(10)
-    assert Enum.count(list) == 10
-  end
-
 end

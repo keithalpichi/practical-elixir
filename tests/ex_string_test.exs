@@ -42,11 +42,6 @@ defmodule ExStringTest do
   end
 
   @tag :pending
-  test "replaces substring in string with a new substring" do
-    assert ExString.replace_it("One, two, three boom!", "...") == "One... two... three boom!"
-  end
-
-  @tag :pending
   test "finds substring in string" do
     assert ExString.substring?("sipping on elixir", "elixir")
   end

@@ -11,28 +11,47 @@
 # - https://en.wikipedia.org/wiki/Tail_call
 # - Is tail call optimization even worth it? https://pragtob.wordpress.com/2016/06/16/tail-call-optimization-in-elixir-erlang-not-as-efficient-and-important-as-you-probably-think/
 # - You may want to use private functions to abstract the recursive functions away from public client API
+
 defmodule Recursion do
-  def map(enum, f) do
+  @doc """
+  Call the `f` function on each item in the list and return this list
+  """
+  def map(list, f) do
   end
 
-  def filter(enum, f) do
+  @doc """
+  Call the `f` function on each item in the list filtering each that return true and return this list
+  """
+  def filter(list, f) do
   end
 
-  def reduce(enum, f) do
+  @doc """
+  Return the sum of the list using recursion
+  """
+  def reduce_sum(list) do
   end
 
-  def reduce_sum(enum) do
+  @doc """
+  Return the product of the list using recursion
+  """
+  def reduce_prod(list) do
   end
 
-  def reduce_prod(enum) do
-  end
-
-  def drop_dups(enum) do
+  @doc """
+  Return the list with duplicates removed using recursion
+  """
+  def drop_dups(list) do
   end
   
+  @doc """
+  Return the string reversed using recursion
+  """
   def reverse_string(string) do
   end
 
+  @doc """
+  Return the list reversed using recursion
+  """
   def reverse_list(list) do
   end
 end

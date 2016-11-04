@@ -1,5 +1,6 @@
 # Learning Outcomes:
 # - use of String module to manipulate strings
+# - introduction to enumerables and lists
 
 # Restrictions: none 
 

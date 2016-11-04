@@ -2,12 +2,13 @@
 # - use of Tuple module
 # - pattern matching using tuples with functions that return tuples
 # - use of tuples in `case` statements
-# - use of tuples to catch and use errors
+# - use of tuples to catch and use errors instead of using `try` and `rescue`
 
 # Restrictions: none
 
 # Resources:
 # - http://elixir-lang.org/docs/stable/elixir/Tuple.html
+# - More details about errors will be discussed when you get to OTP.
 defmodule ExTuple do
 
   @doc """
@@ -27,7 +28,7 @@ defmodule ExTuple do
 
   @doc """
   Return a tuple {:ok, "Here are the contents of the file"} if file exists otherwise {:error, "File does not exist"}.
-  You will place the file name of an existent file on your machine in the successful test case and a non-existent file name in the failing case.
+  You will place the file name of an existent file on your machine in the successful test case.
   """
   def file(string) do
   end

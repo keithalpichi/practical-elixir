@@ -1,11 +1,16 @@
-# Comments are preceded by a single "#".
-# Printing to the console/terminal is used with the `IO.puts()` and `IO.inspect` functions. http://elixir-lang.org/docs/stable/elixir/IO.html
-#
-# Comments will be added before code to help document it's purpose and to provide clarification.
-# 
-# In this exercise you'll learn the basics of setting up an Elixir test using ExUnit. Find the docs for Exunit at http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html
+# Learning outcomes: 
+# - setting up an Elixir test using ExUnit
+# - configure tests
+# - use tags to run specific tests
 
-# Understand the stack trace and errors when your code or tests fail. Hint: Look for the stars ("*" or "**").
+# Restrictions: none
+
+# Resources:
+# - Find the docs for Exunit at http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html
+# - Understand the stack trace and errors when your code or tests fail. Hint: Look for the stars ("*" or "**") and the filename with the line where the error occured (ie, `file.exs:123`).
+# - Comments will be added before code to help document it's purpose and to provide clarification.
+
+# ------------------------------------------------------------
 
 # Start ExUnit
 ExUnit.start
@@ -38,7 +43,7 @@ defmodule TestsTest do
   end
 
   @tag :pending
-  test "assert in delete" do
+  test "assert in delta with two numbers" do
     flunk "What is 'assert_in_delta'?"
   end
 

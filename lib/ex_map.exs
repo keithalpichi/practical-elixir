@@ -13,7 +13,7 @@ defmodule ExMap do
   defstruct name: nil, favorite_lang: "elixir" #add your own!
 
   @doc """
-  Return a map of the longest word and it's number of times it appears in the string. Return nil if the string is empty
+  Return a map of the longest word and the number of times it appears in the string. Return nil if the string is empty
   If there are more than one word that shares the same length include that word as well.
 
   ## Examples
@@ -57,7 +57,7 @@ defmodule ExMap do
   @doc """
   Return a map with each string in the `string` separated by their length. The items in the map values should be in sorted lists.
   ## Examples
-    iex> ExMap.string_length("bob sally alice joe") # %{3: ["bob", "joe"], 5: ["alice", "sally"]}
+    iex> ExMap.string_length("bob sally alice joe") # %{3 => ["bob", "joe"], 5 => ["alice", "sally"]}
   """
   def string_length(string) do
   end
@@ -78,17 +78,18 @@ defmodule ExMap do
   Return a map with the keys as values and the values as keys. If the values are lists make each item in the list keys.
 
   ## Examples
-    iex> ExMap.invert(%{2: "a", 1: "b"}) # %{"a" => 2, "b" => 1}
-    iex> ExMap.invert(%{2: ["a", "b"]}) # %{"a" => 2, "b" => 2}
+    iex> ExMap.invert(%{2 => "a", 1 =>"b"}) # %{"a" => 2, "b" => 1}
+    iex> ExMap.invert(%{2 => ["a", "b"]}) # %{"a" => 2, "b" => 2}
   """
   def invert(map) do
   end
 
   @doc """
-  Return a string of all the struct values separated by one white space
+  Return a string of all the struct values separated by one white space. Do NOT include `nil` values in the string.
   ## Examples
-    iex> ExMap.print(map = ExMap%{name: "john"}) # "john elixir" 
+    iex> ExMap.print(ExMap%{name: "john"}) # "john elixir"
+    iex> ExMap.print(ExMap%{}) # "elixir"
   """
-  def print() do
+  def print do
   end
 end
