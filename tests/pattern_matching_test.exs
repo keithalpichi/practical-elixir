@@ -30,10 +30,6 @@ defmodule PatternMatchingTest do
     #[head|tail] = [1,2,3,["foo", 12.5]]
     #assert head ==
     #assert tail ==
-    #[_|t] == [1,2,3] #What do you think `_` does?
-    #assert t ==
-    #[h|_] == [3,2,1]
-    #assert h ==
   end
 
   @tag :pending
@@ -42,18 +38,9 @@ defmodule PatternMatchingTest do
     #[a,b,_] = [1,["nested"],3]
     #assert a ==
     #assert b ==
-    #%{a: c, b: d} == %{a: "foo", b: [10, "bar"]}
+    #%{a: c, b: d} = %{a: "foo", b: [10, "bar"]}
     #assert c ==
     #assert d ==
-  end
-
-  @tag :pending
-  test "pin operator to match against existing variables" do
-    flunk "This time edit the left side of '==' by replacing `me` with your code. Remove comments below and `flunk` when you're ready to run this test."
-    #x = 36
-    #[1,2,y] = [1,2, "foo"]
-    #assert "me" == 36
-    #assert "me" == [1,2, "foo"]
   end
 
   @tag :pending
@@ -62,8 +49,14 @@ defmodule PatternMatchingTest do
   end
 
   @tag :pending
+  test "guard match an odd argument" do
+    assert PatternMatching.even_guard(11) == "11 is not even!"
+  end
+
+
+  @tag :pending
   test "guard match an item in a list" do
-    assert PatternMatching.first_item_map_guard(10) == "first item is map"
+    assert PatternMatching.first_item_map_guard([%{}, 12, "foo"]) == "first item is a map"
   end
 
   @tag :pending
