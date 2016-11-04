@@ -37,6 +37,12 @@ defmodule ExString do
   end
 
   @doc """
+  Return every word in the string with the first letter capitalized.
+  """
+  def titleize(string) do
+  end
+
+  @doc """
   Return every character in the opposite case.
 
   ## Examples
@@ -47,13 +53,9 @@ defmodule ExString do
 
   @doc """
   Return true if the substring is found in the string, false otherwise.
+
+  Try not use `String.contains?/2` if you can
   """
   def substring?(string, substring) do
-  end
-
-  @doc """
-  Return every word in the string with the first letter capitalized.
-  """
-  def titleize(string) do
   end
 end

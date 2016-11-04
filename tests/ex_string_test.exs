@@ -23,7 +23,7 @@ defmodule ExStringTest do
 
   @tag :pending
   test "splits a sentence into a list of letters" do
-    assert ExString.split_into_letters("Banana split for dinner") == ["Banana", "split", "for", "dinner"]
+    assert ExString.split_into_letters("Banana split for dinner") == ~w(B a n a n a) ++ [" "] ++ ~w(s p l i t) 
   end
 
   @tag :pending
