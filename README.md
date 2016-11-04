@@ -59,6 +59,7 @@ Each file contains the following comments:
 |`ex_tuple_test.exs`|`ex_tuple.exs`|Tuples and error handling|
 
 Tests & exercises to implement (*contributors welcome!*)
+
 |Learning Outcome|
 |:---|
 |[Directives](http://elixir-lang.org/getting-started/alias-require-and-import.html)|
