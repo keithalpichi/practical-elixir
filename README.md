@@ -31,6 +31,7 @@ Here are optional but highly recommended resources to complete before going furt
 
 ## Usage
 - If you're new to Elixir please take the [Elixir Getting Started Guides](http://elixir-lang.org/getting-started/introduction.html). It will prepare you for the exercises to come in this project.
+- Clone the project `git clone https://github.com/keithalpichi/practical-elixir.git` and change in to it.
 - Complete the exercises in `lib` based on the order listed under "Exercise List" below.
 - Run the corresponding test files in `tests` like so: `elixir test_name_test.exs` where `test_name_test` is the name of the file. 
 - Read and review the output of the tests and continue to edit the corresponding file until all tests pass then move on to the next exercise.
