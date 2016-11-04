@@ -42,7 +42,7 @@ test "what this test proves, using adjectives, verbs, and nouns" do
   assert 1 == 1
 end
 ```
- - where the `:pending` tags allow the user to run select test cases
+ - where the `:pending` tags allow the user to exclude select test cases
 
 ## [Exercise Requirements](#exercise)
 ---
